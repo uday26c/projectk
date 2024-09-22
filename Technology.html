@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced Post Store Container with Header and Footer for a modern and responsive web layout focused on technology.">
+    <title>Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Header */
+      
+
+        /* Post Store Container */
+        .post-store {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 10px auto;
+            padding: 20px;
+        }
+
+        /* Post Category Title */
+        .post-category {
+            text-align: center;
+            font-size: 1.7rem;
+            margin: 5px 0;
+            color: #007bff;
+        }
+
+        /* Individual post item */
+        .post-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .post-title:hover {
+            color: #007bff;
+        }
+
+        .post-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+       
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container ul {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .social-icons {
+                display: none;
+            }
+
+            #sideNav ul {
+                padding-left: 0;
+            }
+
+            .post-category {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-category {
+                font-size: 1.3rem;
+            }
+
+            .post-item {
+                margin-bottom: 15px;
+            }
+
+            .post-title {
+                font-size: 1.3rem;
+            }
+
+            .post-description {
+                font-size: 0.9rem;
+            }
+
+            .read-more {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            #sideNav {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+
+
+        <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+        <div class="nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                
+                <li>
+                    <a href="#">Tech</a>
+                    <div class="dropdown">
+                        <a href="#">Gaming</a>
+                        <a href="#">Progrmaing</a>
+                        <a href="#">Ai</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Health</a>
+                    <div class="dropdown">
+                        <a href="#">Fitness</a>
+                        <a href="#">Exercise</a>
+                        <a href="#">Skin</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Nature</a>
+                    <div class="dropdown">
+                        <a href="#">Earth</a>
+                        <a href="#">Global-Warming</a>
+                        <a href="#">Care</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Finance</a>
+                    <div class="dropdown">
+                        <a href="#">Crycptocurrency</a>
+                        <a href="#">Stocks</a>
+                        <a href="#">Guide</a>
+                    </div>
+                </li>
+                <li><a href="#">Creativity</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="#" title="linkdin" target="_blank"><img src="https://www.svgrepo.com/show/144030/linkedin-square-logo.svg" alt=""></a>
+            <a href="#" title="Instagram" target="_blank"><img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt=""></a>
+            <a href="#" title="facebook" target="_blank"><img src="https://www.svgrepo.com/show/494167/facebook.svg" alt="facebook"></a>
+            <a href="#" title="YouTube" target="_blank"><img src="https://www.svgrepo.com/show/494191/youtube.svg" alt="youtube"></a>
+        </div>
+    </header>
+
+      <!-- Side Navigation -->
+      <nav id="sideNav">
+        <span class="close-btn" onclick="toggleNav()">&times;</span>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+
+
+
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Nature</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Creativity</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Post Store Container -->
+    <h1 class="post-category">Technology</h1>
+
+    <div class="post-store">
+        <!-- Post items -->
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title">Best Frameworks to Build Desktop Applications</h2>
+                <p class="post-description">With the increasing demand for desktop applications, choosing the right framework is crucial for developers aiming to create robust</p>
+                <a href="/Technology/best-framework-to-build-desktop-application.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title">Best Free AI Tools for Graphic Design</h2>
+                <p class="post-description">In today’s digital age, the demand for visually captivating content has never been higher. Whether you’re a professional designer </p>
+                <a href="/Technology/best-free-ai-design-tools.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title">How to Learn Dart for Flutter
+                </h2>
+                <p class="post-description">Flutter has rapidly become one of the most popular frameworks for building cross-platform mobile applications, </p>
+                <a href="/Technology/how-to-learn-dart-for-flutter.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title"> How to Learn Rust Programming Language</h2>
+                <p class="post-description">Rust is a systems programming language that emphasizes safety, speed, and concurrency. With its growing popularity among developers</p>
+                <a href="/Technology/how-to-learn-rust-programming-language.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title">Best Way to Build a Personal Website</h2>
+                <p class="post-description">In today’s digital age, having a personal website is essential for showcasing your work, sharing your ideas, and establishing an online presence. </p>
+                <a href="/Technology/best-way-to-build-personal-website.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <div class="post-content">
+                <h2 class="post-title">How to Understand SQL Queries</h2>
+                <p class="post-description">Structured Query Language (SQL) is the standard language for managing and manipulating databases. Understanding SQL queries</p>
+                <a href="/Technology/how-to-understand-sql-query.html" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-links">
+                    <a href="#about-us">About Us</a>
+                    <a href="#privacy-policy">Privacy Policy</a>
+                    <a href="#terms-of-service">Terms of Service</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Share on Facebook"><img src="https://www.svgrepo.com/show/144030/linkedin-square-logo.svg" alt="Facebook"></a>
+                    <a href="#" class="social-icon" aria-label="Share on Twitter"><img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon" aria-label="Share on LinkedIn"><img src="https://www.svgrepo.com/show/494167/facebook.svg" alt="LinkedIn"></a>
+                    <a href="#" class="social-icon" aria-label="Share on Instagram"><img src="https://www.svgrepo.com/show/494191/youtube.svg" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="newsletter-signup">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>IdeaBlogHub.com- All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleNav() {
+            var sideNav = document.getElementById("sideNav");
+            if (sideNav.style.left === "-250px" || sideNav.style.left === "") {
+                sideNav.style.left = "0";
+            } else {
+                sideNav.style.left = "-250px";
+            }
+        }
+    </script>
+   
